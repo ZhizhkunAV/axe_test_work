@@ -1,11 +1,14 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.Owner;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import pages.MainPage;
 
 
 import static com.codeborne.selenide.Condition.*;
@@ -13,7 +16,9 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 @DisplayName("Тест-сьют на aviasales")
-public class CaseTests {
+public class CaseTests  extends TestBase {
+    public MainPage mainpage = new MainPage();
+
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://www.aviasales.ru/";
@@ -28,6 +33,7 @@ public class CaseTests {
     @Owner("Andrey")
     @Test
     void haveSalesTicketsTest() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
 
         open("");
 
@@ -44,6 +50,7 @@ public class CaseTests {
     @Owner("Andrey")
     @Test
     void havePlaceTextTest() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
 
         open("");
 
@@ -59,6 +66,7 @@ public class CaseTests {
     @Owner("Andrey")
     @Test
     void haveTextAboutRussianCityTest() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
 
         open("");
 
@@ -72,6 +80,7 @@ public class CaseTests {
     @Owner("Andrey")
     @Test
     void haveTextInProfileTest() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
 
         open("");
 
@@ -85,10 +94,11 @@ public class CaseTests {
     @Owner("Andrey")
     @Test
     void choiceOstrovokTest() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
 
-        open("");
-
-        $(".s__BGUqp9s2kxbNEnDjdIYc").click();
-        $(".s__BGUqp9s2kxbNEnDjdIYc").click();
+        mainpage.openPage()
+                .clickBoxOstrovok()
+                .clickBoxOstrovok()
+                .clickBoxOstrovok();
     }
 }
