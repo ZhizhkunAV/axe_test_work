@@ -58,7 +58,7 @@ tasks.withType(Test) {
 
 task demoqa_smoke_test(type: Test) {
     useJUnitPlatform {
-        includeTags("smoke")
+        includeTags("critical")
     }
 }
 
