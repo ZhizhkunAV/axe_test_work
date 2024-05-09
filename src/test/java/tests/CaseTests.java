@@ -5,6 +5,7 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
 import pages.NowPage;
@@ -22,7 +23,11 @@ public class CaseTests extends TestBase {
 
 
     @DisplayName("Наличие текста у чекбокса 'Подписаться на рассылку Авиасейлс'")
-    @Tag("critical")
+    @Tags({
+            @Tag("critical"),
+            @Tag("ALL")
+    })
+//    @Tag("critical")
     @Owner("Andrey")
     @Test
     void haveSalesTicketsTest() {
@@ -40,7 +45,11 @@ public class CaseTests extends TestBase {
     }
 
     @DisplayName("Название кнопки - 'Список мест (10)'")
-    @Tag("critical")
+    @Tags({
+            @Tag("critical"),
+            @Tag("ALL")
+    })
+//@Tag("critical")
     @Owner("Andrey")
     @Test
     void havePlaceTextTest() {
@@ -67,7 +76,11 @@ public class CaseTests extends TestBase {
     }
 
     @DisplayName("В выборе 'Путешествия по России' есть город 'Калинигрд'")
-    @Tag("minor")
+    @Tags({
+            @Tag("minor"),
+            @Tag("ALL")
+    })
+//@Tag("minor")
     @Owner("Andrey")
     @Test
     void haveTextAboutRussianCityTest() {
@@ -88,7 +101,11 @@ public class CaseTests extends TestBase {
     }
 
     @DisplayName("Наличие текста 'Доступ к поддержке и подпискам на цены' в плашке 'Ваш профиль'")
-    @Tag("minor")
+    @Tags({
+            @Tag("minor"),
+            @Tag("ALL")
+    })
+//@Tag("minor")
     @Owner("Andrey")
     @Test
     void haveTextInProfileTest() {
@@ -106,7 +123,11 @@ public class CaseTests extends TestBase {
     }
 
     @DisplayName("Снять и проставить отметку выбора - 'Открыть Ostrovok.ru в новой вкладке' на главной странице")
-    @Tag("minor")
+    @Tags({
+            @Tag("minor"),
+            @Tag("ALL")
+    })
+//@Tag("minor")
     @Owner("Andrey")
     @Test
     void choiceOstrovokTest() {

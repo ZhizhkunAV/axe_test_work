@@ -67,3 +67,8 @@ task demoqa_minor_test(type: Test) {
         includeTags("minor")
     }
 }
+task demoqa_all_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("ALL")
+    }
+}
