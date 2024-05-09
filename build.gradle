@@ -64,6 +64,6 @@ task demoqa_smoke_test(type: Test) {
 
 task demoqa_negative_test(type: Test) {
     useJUnitPlatform {
-        includeTags("negative")
+        includeTags("minor")
     }
 }

@@ -1,10 +1,8 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.Owner;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -13,8 +11,7 @@ import pages.NowPage;
 import pages.ProfilePage;
 import pages.SettingsPage;
 
-
-import static com.codeborne.selenide.Selenide.*;
+import static io.qameta.allure.Allure.step;
 
 @DisplayName("Тест-сьют на aviasales")
 public class CaseTests extends TestBase {
@@ -23,14 +20,6 @@ public class CaseTests extends TestBase {
     public NowPage nowpage = new NowPage();
     public ProfilePage profilepage = new ProfilePage();
 
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.baseUrl = "https://www.aviasales.ru/";
-        Configuration.browserSize = "1366x768";
-        Configuration.pageLoadStrategy = "eager";
-        Configuration.holdBrowserOpen = true;
-        Configuration.timeout = 10000;
-    }
 
     @DisplayName("Наличие текста у чекбокса 'Подписаться на рассылку Авиасейлс'")
     @Tag("critical")
@@ -39,9 +28,15 @@ public class CaseTests extends TestBase {
     void haveSalesTicketsTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        mainpage.openPage()
-                .clickButtonProfile();
-        settingspage.checkTextElement("Подписаться на рассылку Авиасейлс");
+        step("Открыть стартовую страницу сайта", () -> {
+            mainpage.openPage();
+        });
+        step("Переход на страницу 'Профиль'", () -> {
+            mainpage.clickButtonProfile();
+        });
+        step("Проверка наличия текста 'Подписаться на рассылку Авиасейлс'", () -> {
+            settingspage.checkTextElement("Подписаться на рассылку Авиасейлс");
+        });
     }
 
     @DisplayName("Название кнопки - 'Список мест (10)'")
@@ -51,12 +46,24 @@ public class CaseTests extends TestBase {
     void havePlaceTextTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        mainpage.openPage()
-                .clickButtonNow();
-        nowpage.clickNowVisa()
-                .choiseFindCity()
-                .choiseLocalDish()
-                .checkButtonOfLocalDish("Список мест (10)");
+        step("Открыть стартовую страницу сайта", () -> {
+            mainpage.openPage();
+        });
+        step("Переход на страницу 'Короче'", () -> {
+            mainpage.clickButtonNow();
+        });
+        step("Открытие страницы 'Можно без визы'", () -> {
+            nowpage.clickNowVisa();
+        });
+        step("Выбор города", () -> {
+            nowpage.choiseFindCity();
+        });
+        step("Выбор плашки 'Местные блюда'", () -> {
+            nowpage.choiseLocalDish();
+        });
+        step("Проверка названия кнопки - 'Список мест (10)'", () -> {
+            nowpage.checkButtonOfLocalDish("Список мест (10)");
+        });
     }
 
     @DisplayName("В выборе 'Путешествия по России' есть город 'Калинигрд'")
@@ -66,12 +73,18 @@ public class CaseTests extends TestBase {
     void haveTextAboutRussianCityTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        open("");
-
-        mainpage.openPage()
-                .clickButtonNow();
-        nowpage.clickButtonRusTravaling()
-                .clickButtonRusTravaling("Калининград");
+        step("Открыть стартовую страницу сайта", () -> {
+            mainpage.openPage();
+        });
+        step("Переход на страницу 'Короче'", () -> {
+            mainpage.clickButtonNow();
+        });
+        step("Переход на страницу 'Путешествия по России'", () -> {
+            nowpage.clickButtonRusTravaling();
+        });
+        step("Проверка наличия города в списке - 'Калиниград'", () -> {
+            nowpage.clickButtonRusTravaling("Калининград");
+        });
     }
 
     @DisplayName("Наличие текста 'Доступ к поддержке и подпискам на цены' в плашке 'Ваш профиль'")
@@ -81,10 +94,15 @@ public class CaseTests extends TestBase {
     void haveTextInProfileTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        mainpage.openPage()
-                .clickButtonProfile();
-        profilepage.checkTextAboutPrice();
-
+        step("Открыть стартовую страницу сайта", () -> {
+            mainpage.openPage();
+        });
+        step("Переход на страницу 'Профиль'", () -> {
+            mainpage.clickButtonProfile();
+        });
+        step("Проверка наличия текста 'Доступ к поддержке и подпискам на цены' в плашке 'Ваш профиль'", () -> {
+            profilepage.checkTextAboutPrice();
+        });
     }
 
     @DisplayName("Снять и проставить отметку выбора - 'Открыть Ostrovok.ru в новой вкладке' на главной странице")
@@ -94,9 +112,17 @@ public class CaseTests extends TestBase {
     void choiceOstrovokTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        mainpage.openPage()
-                .clickBoxOstrovok()
-                .clickBoxOstrovok()
-                .clickBoxOstrovok();
+        step("Открыть стартовую страницу сайта", () -> {
+            mainpage.openPage();
+        });
+        step("Снять выбора в чекбоксе - 'Открыть Ostrovok.ru в новой вкладке'", () -> {
+            mainpage.clickBoxOstrovok();
+        });
+        step("Проставить выбор в чекбоксе - 'Открыть Ostrovok.ru в новой вкладке'", () -> {
+            mainpage.clickBoxOstrovok();
+        });
+        step("Снять выбора в чекбоксе - 'Открыть Ostrovok.ru в новой вкладке'", () -> {
+            mainpage.clickBoxOstrovok();
+        });
     }
 }
