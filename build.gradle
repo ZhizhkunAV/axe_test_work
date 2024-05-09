@@ -56,13 +56,13 @@ tasks.withType(Test) {
 }
 
 
-task demoqa_smoke_test(type: Test) {
+task demoqa_critical_test(type: Test) {
     useJUnitPlatform {
         includeTags("critical")
     }
 }
 
-task demoqa_negative_test(type: Test) {
+task demoqa_minor_test(type: Test) {
     useJUnitPlatform {
         includeTags("minor")
     }
