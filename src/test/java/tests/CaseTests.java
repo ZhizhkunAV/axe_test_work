@@ -10,18 +10,18 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
 import pages.NowPage;
+import pages.ProfilePage;
 import pages.SettingsPage;
 
 
-import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 @DisplayName("Тест-сьют на aviasales")
-public class CaseTests  extends TestBase {
+public class CaseTests extends TestBase {
     public MainPage mainpage = new MainPage();
     public SettingsPage settingspage = new SettingsPage();
     public NowPage nowpage = new NowPage();
+    public ProfilePage profilepage = new ProfilePage();
 
     @BeforeAll
     static void beforeAll() {
@@ -53,14 +53,10 @@ public class CaseTests  extends TestBase {
 
         mainpage.openPage()
                 .clickButtonNow();
-        nowpage.clickNowVisa();
-
-
-
-
-
-        $(byText("Местные блюда")).click();
-        $("#travel-map-layer-selector-2240").shouldBe(text("Список мест (10)"));
+        nowpage.clickNowVisa()
+                .choiseFindCity()
+                .choiseLocalDish()
+                .checkButtonOfLocalDish("Список мест (10)");
     }
 
     @DisplayName("В выборе 'Путешествия по России' есть город 'Калинигрд'")
@@ -72,9 +68,10 @@ public class CaseTests  extends TestBase {
 
         open("");
 
-        $(".selene-form").$$("li").findBy(text("Короче")).click();
-        $(".s__E9Tbhhl8hEybC5rmIJrs").$$("li").findBy(text("Путешествия по России")).click();
-        $(".s__xox66OPZpu0km1VJV6rZ").$(".s__VLPIHQnQeyzCMiHfqsUf").shouldBe(text("Калининград"));
+        mainpage.openPage()
+                .clickButtonNow();
+        nowpage.clickButtonRusTravaling()
+                .clickButtonRusTravaling("Калининград");
     }
 
     @DisplayName("Наличие текста 'Доступ к поддержке и подпискам на цены' в плашке 'Ваш профиль'")
@@ -84,10 +81,9 @@ public class CaseTests  extends TestBase {
     void haveTextInProfileTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        open("");
-
-        $(".selene-form").$$("li").findBy(text("Профиль")).click();
-        $(".s__zwNEG6Giz0QZgdTiiWBX").shouldBe(text("Доступ к поддержке и подпискам на цены"));
+        mainpage.openPage()
+                .clickButtonProfile();
+        profilepage.checkTextAboutPrice();
 
     }
 
