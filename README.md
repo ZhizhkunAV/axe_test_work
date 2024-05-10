@@ -90,6 +90,7 @@ clean ${TASK} -Dbrowser=${BROWSER} -DbrowserVersion=${BROWSER_VERSION} -Dbrowser
 <a id="allure-testops"></a>
 ## <img alt="Allure" height="25" src="./media/img/AllureTestOps.svg" width="25"/></a> Integration with <a target="_blank" href="https://allure.autotests.cloud/project/4225/dashboards">Allure TestOps</a>
 
+Full statistics on the completion of test cases, reports and applications to them are stored in Allure TestOps (access request admin@qa.guru ).
 All test cases and execution results are available in `Allure TestOps`. Dashboard contains test runs statistics:
 <img alt="Dashboard" src="./media/reports/Dashboard.PNG">
 
