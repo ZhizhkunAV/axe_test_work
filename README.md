@@ -75,7 +75,7 @@ clean ${TASK} -Dbrowser=${BROWSER} -DbrowserVersion=${BROWSER_VERSION} -Dbrowser
 
 <a id="allure"></a>
 ## <img alt="Allure" height="25" src="./media/img/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [reporting](https://jenkins.autotests.cloud/job/zhizhkunav_aviasales/3/allure/)</a>
-<img alt="Allure" src="./media/reports/AllureReportExample.png"> 
+<img alt="Allure" src="./media/reports/AllureReportExample.PNG"> 
 
 `Allure` report includes:
 - Test steps
@@ -84,22 +84,22 @@ clean ${TASK} -Dbrowser=${BROWSER} -DbrowserVersion=${BROWSER_VERSION} -Dbrowser
 - Browser console logs
 - Video of execution for automated tests
 
-<img alt="Allure2" src="./media/reports/AllureReportExample2.png">
+<img alt="Allure2" src="./media/reports/AllureReportExample2.PNG">
 
 <a id="allure-testops"></a>
 ## <img alt="Allure" height="25" src="./media/img/AllureTestOps.svg" width="25"/></a> Integration with <a target="_blank" href="https://allure.autotests.cloud/project/4225/dashboards">Allure TestOps</a>
 
 All test cases and execution results are available in `Allure TestOps`. Dashboard contains test runs statistics:
-<img alt="Dashboard" src="./media/reports/Dashboard.png">
+<img alt="Dashboard" src="./media/reports/Dashboard.PNG">
 
 Automated cases:
-<img alt="Cases1" src="./media/reports/AutomatedCases.png">
+<img alt="Cases1" src="./media/reports/AutomatedCases.PNG">
 
 Manual cases:
-<img alt="Cases2" src="./media/reports/ManualCases.png">
+<img alt="Cases2" src="./media/reports/ManualCases.PNG">
 
 Launches:
-<img alt="Launch" src="./media/reports/Launches.png">
+<img alt="Launch" src="./media/reports/Launches.PNG">
 
 
 
@@ -108,12 +108,12 @@ Launches:
 
 `Jira` task has information about all created test cases, their statuses and test launches results from `Allure TestOps`:
 
-<img alt="JIRA" src="./media/reports/JIRA.png">
+<img alt="JIRA" src="./media/reports/JIRA.PNG">
 
 <a id="telegram"></a>
 ## <img alt="Allure" height="25" src="./media/img/Telegram.svg" width="25"/></a> Bot notifications in Telegram
 After every build Telegram bot sends notification with `Allure` report:
-<img alt="Bot" src="./media/reports/Telegram_screen.png"> 
+<img alt="Bot" src="./media/reports/Telegram.PNG"> 
 
 <a id="video"></a>
 ## <img alt="Selenoid" height="25" src="./media/img/Selenoid.svg" width="25"/></a> Examples of test execution
