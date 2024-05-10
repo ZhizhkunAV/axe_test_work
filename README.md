@@ -1,4 +1,4 @@
-# Training project for test automation of [aviasales](https://www.aviasales.ru/)
+# Training project to automate test scenarios for the company's website of [aviasales](https://www.aviasales.ru/)
 
 ---
 
@@ -36,6 +36,7 @@ Here you can find flights from 2000+ airlines and fly to 193 countries.
 <a href="https://qameta.io/"><img src="./media/img/AllureTestOps.svg" width="50" height="50"  alt="Allure TestOps"/></a>   
 <a href="https://www.jenkins.io/"><img src="./media/img/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>  
 <a href="https://www.atlassian.com/ru/software/jira/"><img src="./media/img/JIRA.svg" width="50" height="50"  alt="Jira"/></a>
+<a href="https://telegram.org//"><img src="./media/img/Telegram.svg" width="50" height="50"  alt="Jira"/></a>
 </p>
 
 <a id="scenarios"></a>
@@ -50,7 +51,7 @@ Here you can find flights from 2000+ airlines and fly to 193 countries.
 
 <a id="jenkins"></a>
 ## <img alt="Jenkins" height="25" src="./media/img/Jenkins.svg" width="25"/></a><a name="CI/CD with Jenkins"></a>CI/CD with [Jenkins](https://jenkins.autotests.cloud/job/zhizhkunav_aviasales/)</a>
-<img alt="Jenkins" src="./media/reports/Jenkins.png"> 
+<img alt="Jenkins" src="./media/reports/Jenkins.PNG"> 
 
 ### Jenkins parameters:
 
@@ -61,7 +62,7 @@ Here you can find flights from 2000+ airlines and fly to 193 countries.
 - `WD_HOST` (data of remote Selenoid server)
 
 <a id="cli"></a>
-## <img alt="cli" height="25" src="./media/img/run.png" width="25"> Launch from the CLI
+## Launch from the CLI
 
 **Local launch:**
 ```bash  
@@ -89,11 +90,12 @@ clean ${TASK} -Dbrowser=${BROWSER} -DbrowserVersion=${BROWSER_VERSION} -Dbrowser
 <a id="allure-testops"></a>
 ## <img alt="Allure" height="25" src="./media/img/AllureTestOps.svg" width="25"/></a> Integration with <a target="_blank" href="https://allure.autotests.cloud/project/4225/dashboards">Allure TestOps</a>
 
+Full statistics on the completion of test cases, reports and applications to them are stored in Allure TestOps (access request admin@qa.guru ).
 All test cases and execution results are available in `Allure TestOps`. Dashboard contains test runs statistics:
 <img alt="Dashboard" src="./media/reports/Dashboard.PNG">
 
 Automated cases:
-<img alt="Cases1" src="./media/reports/AutomatedCases.PNG">
+<img alt="Cases1" src="./media/reports/AutomatedCase.PNG">
 
 Manual cases:
 <img alt="Cases2" src="./media/reports/ManualCases.PNG">
@@ -117,4 +119,4 @@ After every build Telegram bot sends notification with `Allure` report:
 
 <a id="video"></a>
 ## <img alt="Selenoid" height="25" src="./media/img/Selenoid.svg" width="25"/></a> Examples of test execution
-<img alt="Video" src="./media/videos/video_avia.mp4"> 
+<img alt="Video" src="./media/videos/video_avia.gif"> 
