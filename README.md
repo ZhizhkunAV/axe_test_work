@@ -117,4 +117,4 @@ After every build Telegram bot sends notification with `Allure` report:
 
 <a id="video"></a>
 ## <img alt="Selenoid" height="25" src="./media/img/Selenoid.svg" width="25"/></a> Examples of test execution
-<img alt="Video" src="./media/video/Subscription_video.gif"> 
+<img alt="Video" src="./media/videos/video_avia.mp4"> 
