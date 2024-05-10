@@ -93,7 +93,7 @@ All test cases and execution results are available in `Allure TestOps`. Dashboar
 <img alt="Dashboard" src="./media/reports/Dashboard.PNG">
 
 Automated cases:
-<img alt="Cases1" src="./media/reports/AutomatedCases.PNG">
+<img alt="Cases1" src="./media/reports/AutomatedCase.PNG">
 
 Manual cases:
 <img alt="Cases2" src="./media/reports/ManualCases.PNG">
