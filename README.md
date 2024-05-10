@@ -5,7 +5,7 @@
 Aviasales is the largest service in Russia for searching and purchasing air tickets. 
 Here you can find flights from 2000+ airlines and fly to 193 countries.
 
-<a href="http://askmask.ru"><img src="./media/aviasales.png"/></a>
+<a href="http://askmask.ru"><img src="./media/aviasales.webp"/></a>
 
 ---
 
