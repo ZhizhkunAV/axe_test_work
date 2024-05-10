@@ -1,4 +1,4 @@
-# Training project for test automation of [aviasales](https://www.aviasales.ru/)
+# Training project to automate test scenarios for the company's website of [aviasales](https://www.aviasales.ru/)
 
 ---
 
