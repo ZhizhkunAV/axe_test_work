@@ -36,6 +36,7 @@ Here you can find flights from 2000+ airlines and fly to 193 countries.
 <a href="https://qameta.io/"><img src="./media/img/AllureTestOps.svg" width="50" height="50"  alt="Allure TestOps"/></a>   
 <a href="https://www.jenkins.io/"><img src="./media/img/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>  
 <a href="https://www.atlassian.com/ru/software/jira/"><img src="./media/img/JIRA.svg" width="50" height="50"  alt="Jira"/></a>
+<a href="https://telegram.org//"><img src="./media/img/Telegram.svg" width="50" height="50"  alt="Jira"/></a>
 </p>
 
 <a id="scenarios"></a>
