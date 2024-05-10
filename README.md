@@ -5,7 +5,7 @@
 Aviasales is the largest service in Russia for searching and purchasing air tickets. 
 Here you can find flights from 2000+ airlines and fly to 193 countries.
 
-<a href="http://askmask.ru"><img src="./media/aviasales.png"/></a>
+<a href="https://www.aviasales.ru/"><img src="./media/img/aviasales.webp"/></a>
 
 ---
 
@@ -49,7 +49,7 @@ Here you can find flights from 2000+ airlines and fly to 193 countries.
 * [x] Verify basket is empty when no products were added 
 
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="./media/logo/Jenkins.svg" width="25"/></a><a name="CI/CD with Jenkins"></a>CI/CD with [Jenkins](https://jenkins.autotests.cloud/job/zhizhkunav_aviasales/)</a>
+## <img alt="Jenkins" height="25" src="./media/img/Jenkins.svg" width="25"/></a><a name="CI/CD with Jenkins"></a>CI/CD with [Jenkins](https://jenkins.autotests.cloud/job/zhizhkunav_aviasales/)</a>
 <img alt="Jenkins" src="./media/reports/Jenkins.png"> 
 
 ### Jenkins parameters:
@@ -74,7 +74,7 @@ clean ${TASK} -Dbrowser=${BROWSER} -DbrowserVersion=${BROWSER_VERSION} -Dbrowser
 ```
 
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="./media/img/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [reporting](https://jenkins.autotests.cloud/job/26-asolqa-training_project/allure/)</a>
+## <img alt="Allure" height="25" src="./media/img/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [reporting](https://jenkins.autotests.cloud/job/zhizhkunav_aviasales/3/allure/)</a>
 <img alt="Allure" src="./media/reports/AllureReportExample.png"> 
 
 `Allure` report includes:
@@ -87,7 +87,7 @@ clean ${TASK} -Dbrowser=${BROWSER} -DbrowserVersion=${BROWSER_VERSION} -Dbrowser
 <img alt="Allure2" src="./media/reports/AllureReportExample2.png">
 
 <a id="allure-testops"></a>
-## <img alt="Allure" height="25" src="./media/logo/AllureTestOps.svg" width="25"/></a> Integration with <a target="_blank" href="https://allure.autotests.cloud/project/4206/dashboards">Allure TestOps</a>
+## <img alt="Allure" height="25" src="./media/img/AllureTestOps.svg" width="25"/></a> Integration with <a target="_blank" href="https://allure.autotests.cloud/project/4225/dashboards">Allure TestOps</a>
 
 All test cases and execution results are available in `Allure TestOps`. Dashboard contains test runs statistics:
 <img alt="Dashboard" src="./media/reports/Dashboard.png">
@@ -104,17 +104,17 @@ Launches:
 
 
 <a id="jira"></a>
-## <img alt="Allure" height="25" src="./media/logo/JIRA.svg" width="25"/></a> Integration with <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1202">Jira</a>
+## <img alt="Allure" height="25" src="./media/img/JIRA.svg" width="25"/></a> Integration with <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1220">Jira</a>
 
 `Jira` task has information about all created test cases, their statuses and test launches results from `Allure TestOps`:
 
 <img alt="JIRA" src="./media/reports/JIRA.png">
 
 <a id="telegram"></a>
-## <img alt="Allure" height="25" src="./media/logo/Telegram.svg" width="25"/></a> Bot notifications in Telegram
+## <img alt="Allure" height="25" src="./media/img/Telegram.svg" width="25"/></a> Bot notifications in Telegram
 After every build Telegram bot sends notification with `Allure` report:
 <img alt="Bot" src="./media/reports/Telegram_screen.png"> 
 
 <a id="video"></a>
-## <img alt="Selenoid" height="25" src="./media/logo/Selenoid.svg" width="25"/></a> Examples of test execution
+## <img alt="Selenoid" height="25" src="./media/img/Selenoid.svg" width="25"/></a> Examples of test execution
 <img alt="Video" src="./media/video/Subscription_video.gif"> 
