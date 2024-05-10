@@ -50,7 +50,7 @@ Here you can find flights from 2000+ airlines and fly to 193 countries.
 
 <a id="jenkins"></a>
 ## <img alt="Jenkins" height="25" src="./media/img/Jenkins.svg" width="25"/></a><a name="CI/CD with Jenkins"></a>CI/CD with [Jenkins](https://jenkins.autotests.cloud/job/zhizhkunav_aviasales/)</a>
-<img alt="Jenkins" src="./media/reports/Jenkins.png"> 
+<img alt="Jenkins" src="./media/reports/Jenkins.PNG"> 
 
 ### Jenkins parameters:
 
@@ -61,7 +61,7 @@ Here you can find flights from 2000+ airlines and fly to 193 countries.
 - `WD_HOST` (data of remote Selenoid server)
 
 <a id="cli"></a>
-## <img alt="cli" height="25" src="./media/img/run.png" width="25"> Launch from the CLI
+## Launch from the CLI
 
 **Local launch:**
 ```bash  
