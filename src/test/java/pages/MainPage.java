@@ -2,6 +2,7 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -14,6 +15,12 @@ public class MainPage {
             buttonFound = $("s__Yzjov8gtTIwlOo3oK8L3"),
             buttonProfile = $(".selene-form").$$("li").findBy(text("Профиль")),
             buttonNow = $(".selene-form").$$("li").findBy(text("Короче"));
+
+    public MainPage enabledBoxOstrovok() {
+        boxOstrovok.shouldBe(enabled);
+
+        return this;
+    }
 
     public MainPage openPage() {
         open("");

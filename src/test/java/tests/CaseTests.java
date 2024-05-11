@@ -12,6 +12,8 @@ import pages.NowPage;
 import pages.ProfilePage;
 import pages.SettingsPage;
 
+import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("Тест-сьют на aviasales")
@@ -31,7 +33,6 @@ public class CaseTests extends TestBase {
     @Owner("Andrey")
     @Test
     void haveSalesTicketsTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Открыть стартовую страницу сайта", () -> {
             mainpage.openPage();
@@ -53,7 +54,6 @@ public class CaseTests extends TestBase {
     @Owner("Andrey")
     @Test
     void havePlaceTextTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Открыть стартовую страницу сайта", () -> {
             mainpage.openPage();
@@ -84,7 +84,6 @@ public class CaseTests extends TestBase {
     @Owner("Andrey")
     @Test
     void haveTextAboutRussianCityTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Открыть стартовую страницу сайта", () -> {
             mainpage.openPage();
@@ -109,7 +108,6 @@ public class CaseTests extends TestBase {
     @Owner("Andrey")
     @Test
     void haveTextInProfileTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Открыть стартовую страницу сайта", () -> {
             mainpage.openPage();
@@ -122,7 +120,7 @@ public class CaseTests extends TestBase {
         });
     }
 
-    @DisplayName("Снять и проставить отметку выбора - 'Открыть Ostrovok.ru в новой вкладке' на главной странице")
+    @DisplayName("Кликабельность чекбокса - 'Открыть Ostrovok.ru в новой вкладке' на главной странице")
     @Tags({
             @Tag("minor"),
             @Tag("ALL")
@@ -131,7 +129,6 @@ public class CaseTests extends TestBase {
     @Owner("Andrey")
     @Test
     void choiceOstrovokTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Открыть стартовую страницу сайта", () -> {
             mainpage.openPage();
@@ -142,8 +139,8 @@ public class CaseTests extends TestBase {
         step("Проставить выбор в чекбоксе - 'Открыть Ostrovok.ru в новой вкладке'", () -> {
             mainpage.clickBoxOstrovok();
         });
-        step("Снять выбора в чекбоксе - 'Открыть Ostrovok.ru в новой вкладке'", () -> {
-            mainpage.clickBoxOstrovok();
+        step("Чекбокс включен", () -> {
+            mainpage.enabledBoxOstrovok();
         });
     }
 }
