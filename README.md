@@ -47,7 +47,6 @@ Here you can find flights from 2000+ airlines and fly to 193 countries.
 * [x] The name of the button is 'List of places (10)'
 * [x] In the choice of 'Travel to Russia' there is the city of 'Kalinigrd'
 * [x] The presence of the text 'Access to support and price subscriptions' in the bar 'Your profile'
-* [x] The clickability of the checkbox is 'Open Ostrovok.ru in the new tab' on the main page
 
 <a id="jenkins"></a>
 ## <img alt="Jenkins" height="25" src="./media/img/Jenkins.svg" width="25"/></a><a name="CI/CD with Jenkins"></a>CI/CD with [Jenkins](https://jenkins.autotests.cloud/job/zhizhkunav_aviasales/)</a>
