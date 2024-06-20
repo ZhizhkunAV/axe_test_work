@@ -1,8 +1,6 @@
 package tests;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.Owner;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -12,8 +10,6 @@ import pages.NowPage;
 import pages.ProfilePage;
 import pages.SettingsPage;
 
-import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("Тест-сьют на aviasales")
@@ -29,7 +25,7 @@ public class CaseTests extends TestBase {
             @Tag("critical"),
             @Tag("ALL")
     })
-//    @Tag("critical")
+
     @Owner("Andrey")
     @Test
     void haveSalesTicketsTest() {
@@ -50,7 +46,7 @@ public class CaseTests extends TestBase {
             @Tag("critical"),
             @Tag("ALL")
     })
-//@Tag("critical")
+
     @Owner("Andrey")
     @Test
     void havePlaceTextTest() {
@@ -80,7 +76,7 @@ public class CaseTests extends TestBase {
             @Tag("minor"),
             @Tag("ALL")
     })
-//@Tag("minor")
+
     @Owner("Andrey")
     @Test
     void haveTextAboutRussianCityTest() {
@@ -104,7 +100,7 @@ public class CaseTests extends TestBase {
             @Tag("minor"),
             @Tag("ALL")
     })
-//@Tag("minor")
+
     @Owner("Andrey")
     @Test
     void haveTextInProfileTest() {
@@ -125,7 +121,8 @@ public class CaseTests extends TestBase {
             @Tag("minor"),
             @Tag("ALL")
     })
-//@Tag("minor")
+
+
     @Owner("Andrey")
     @Test
     void choiceOstrovokTest() {
@@ -139,7 +136,7 @@ public class CaseTests extends TestBase {
         step("Проставить выбор в чекбоксе - 'Открыть Ostrovok.ru в новой вкладке'", () -> {
             mainpage.clickBoxOstrovok();
         });
-        step("Чекбокс включен", () -> {
+        step("Проверить, что чекбокс включен", () -> {
             mainpage.enabledBoxOstrovok();
         });
     }

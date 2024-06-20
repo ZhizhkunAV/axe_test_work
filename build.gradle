@@ -55,18 +55,18 @@ tasks.withType(Test) {
 }
 
 
-task demoqa_critical_test(type: Test) {
+task critical_test(type: Test) {
     useJUnitPlatform {
         includeTags("critical")
     }
 }
 
-task demoqa_minor_test(type: Test) {
+task minor_test(type: Test) {
     useJUnitPlatform {
         includeTags("minor")
     }
 }
-task demoqa_all_test(type: Test) {
+task all_test(type: Test) {
     useJUnitPlatform {
         includeTags("ALL")
     }
