@@ -60,13 +60,6 @@ Here you can find flights from 2000+ airlines and fly to 193 countries.
 - `BROWSER_SIZE` (browser windows size, `1920x1080` by default)
 - `WD_HOST` (data of remote Selenoid server)
 
-<a id="cli"></a>
-## Launch from the CLI
-
-**Local launch:**
-```bash  
-./gradlew clean demoqa_all_test
-```
 
 **Remote Jenkins launch:**
 ```bash  
