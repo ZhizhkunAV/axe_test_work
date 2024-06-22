@@ -1,6 +1,9 @@
 package tests;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -19,6 +22,9 @@ import static io.qameta.allure.Allure.step;
 
 @DisplayName("A test suite for testing the site aviasales")
 @Owner("ZhizhkunAV")
+@Epic(value = "Testing")
+@Feature(value = "UI testing ")
+@Story(value = "Testing Aviasails page")
 public class CaseTests extends TestBase {
     public MainPage mainpage = new MainPage();
     public SettingsPage settingspage = new SettingsPage();
