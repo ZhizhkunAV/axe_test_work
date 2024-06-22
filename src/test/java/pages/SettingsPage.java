@@ -16,5 +16,11 @@ public class SettingsPage {
         return this;
     }
 
+    public SettingsPage checkUnsuccesTextElement(String value) {
+        elementProfile.shouldNot(text(value));
+
+        return this;
+    }
+
 
 }

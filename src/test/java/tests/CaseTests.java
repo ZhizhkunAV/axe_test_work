@@ -141,22 +141,23 @@ public class CaseTests extends TestBase {
     }
 
 
-    @DisplayName("Availability of text 'Доступ к поддержке и подпискам на цены' on the 'Your Profile' page")
+    @DisplayName("Checking for incorrect text")
     @Tags({
-            @Tag("minor"),
+            @Tag("critical"),
             @Tag("ALL")
     })
+
     @Test
-    void haveTwoTextInProfileTest() {
+    void haveSalesTicketsqTest() {
 
         step("Open the start page of the website", () -> {
             mainpage.openPage();
         });
-        step("Go to page 'Профиль'", () -> {
+        step("Go to the 'Profile' page", () -> {
             mainpage.clickButtonProfile();
         });
-        step("Checking for text 'Ваш профиль'", () -> {
-            profilepage.checkTextAboutProfile();
+        step("Check the text", () -> {
+            settingspage.checkUnsuccesTextElement("Открыть Ostrovok.ru в новой вкладке");
         });
     }
 }
