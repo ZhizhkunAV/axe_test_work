@@ -13,7 +13,14 @@ public class NowPage {
             localDish = $(byText("Местные блюда")),
             pageOfLocalDish = $("#travel-map-layer-selector-2240"),
             rusTravaling = $(".s__E9Tbhhl8hEybC5rmIJrs").$$("li").findBy(text("Путешествия по России")),
-            listOfCity = $(".s__xox66OPZpu0km1VJV6rZ").$(".s__VLPIHQnQeyzCMiHfqsUf");
+            listOfCity = $(".s__xox66OPZpu0km1VJV6rZ").$(".s__VLPIHQnQeyzCMiHfqsUf"),
+            visaPlaceholder = $("travel_map_cities_search");
+
+    public NowPage checkPlaceText(String value) {
+        visaPlaceholder.shouldBe(text("Можно без визы"));;
+
+        return this;
+    }
 
 
     public NowPage clickNowVisa() {

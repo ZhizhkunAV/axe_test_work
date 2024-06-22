@@ -14,6 +14,8 @@ public class MainPage {
             buttonProfile = $(".selene-form").$$("li").findBy(text("Профиль")),
             buttonNow = $(".selene-form").$$("li").findBy(text("Короче"));
 
+
+
     public MainPage enabledBoxOstrovok() {
         boxOstrovok.shouldBe(enabled);
 
