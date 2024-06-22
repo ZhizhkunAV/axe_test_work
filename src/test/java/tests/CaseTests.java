@@ -141,27 +141,22 @@ public class CaseTests extends TestBase {
     }
 
 
-    @DisplayName("Button name - 'Список мест (10)'")
+    @DisplayName("Availability of text 'Доступ к поддержке и подпискам на цены' on the 'Your Profile' page")
     @Tags({
-            @Tag("critical"),
+            @Tag("minor"),
             @Tag("ALL")
     })
-
     @Test
-    void haveTextAboutVisaTest() {
+    void haveTwoTextInProfileTest() {
 
         step("Open the start page of the website", () -> {
             mainpage.openPage();
         });
-        step("Go to page 'Короче'", () -> {
-            mainpage.clickButtonNow();
+        step("Go to page 'Профиль'", () -> {
+            mainpage.clickButtonProfile();
         });
-        step("Opening a page 'Можно без визы'", () -> {
-            nowpage.clickNowVisa();
-        });
-
-        step("Placeholder displays the correct text", () -> {
-            nowpage.checkPlaceText("Можно без визы");
+        step("Checking for text 'Ваш профиль'", () -> {
+            profilepage.checkTextAboutProfile();
         });
     }
 }
