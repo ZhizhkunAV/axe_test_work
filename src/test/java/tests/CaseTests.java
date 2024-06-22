@@ -1,18 +1,27 @@
 package tests;
 
+import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.Owner;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import pages.MainPage;
 import pages.NowPage;
 import pages.ProfilePage;
 import pages.SettingsPage;
 
+import static com.codeborne.selenide.Condition.enabled;
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("A test suite for testing the site aviasales")
+@Owner("ZhizhkunAV")
 public class CaseTests extends TestBase {
     public MainPage mainpage = new MainPage();
     public SettingsPage settingspage = new SettingsPage();
@@ -26,7 +35,6 @@ public class CaseTests extends TestBase {
             @Tag("ALL")
     })
 
-    @Owner("Andrey")
     @Test
     void haveSalesTicketsTest() {
 
@@ -46,8 +54,6 @@ public class CaseTests extends TestBase {
             @Tag("critical"),
             @Tag("ALL")
     })
-
-    @Owner("Andrey")
     @Test
     void havePlaceTextTest() {
 
@@ -76,8 +82,6 @@ public class CaseTests extends TestBase {
             @Tag("minor"),
             @Tag("ALL")
     })
-
-    @Owner("Andrey")
     @Test
     void haveTextAboutRussianCityTest() {
 
@@ -100,7 +104,6 @@ public class CaseTests extends TestBase {
             @Tag("minor"),
             @Tag("ALL")
     })
-    @Owner("Andrey")
     @Test
     void haveTextInProfileTest() {
 
@@ -120,7 +123,6 @@ public class CaseTests extends TestBase {
             @Tag("minor"),
             @Tag("ALL")
     })
-    @Owner("Andrey")
     @Test
     void choiceOstrovokTest() {
 
@@ -136,5 +138,27 @@ public class CaseTests extends TestBase {
         step("Check that the checkbox is enabled", () -> {
             mainpage.enabledBoxOstrovok();
         });
+    }
+
+
+    @ValueSource(strings = {
+            "Авиабилеты",
+            "Отели",
+            "Короче",
+            "Подписка",
+            "Профиль"
+    })
+    @ParameterizedTest(name = "Проверка наличия текста - {0} на сайте  GitHub")
+    @Tags({
+            @Tag("WEB"),
+            @Tag("BLOCKER")
+    })
+    @DisplayName("ParameterizedTest для использования одного значения - ValueSource")
+    @Test
+    void parametricText(String searchQuery) {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+
+        open("/");
+        $(".selene-form").$$("li").findBy(text(searchQuery)).shouldBe(enabled);
     }
 }
