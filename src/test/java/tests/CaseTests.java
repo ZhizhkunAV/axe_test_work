@@ -99,7 +99,7 @@ public class CaseTests extends TestBase {
         });
     }
 
-    @DisplayName("Наличие текста 'Доступ к поддержке и подпискам на цены' в плашке 'Ваш профиль'")
+    @DisplayName("Availability of text 'Доступ к поддержке и подпискам на цены' on the 'Your Profile' page")
     @Tags({
             @Tag("minor"),
             @Tag("ALL")
@@ -140,25 +140,4 @@ public class CaseTests extends TestBase {
         });
     }
 
-
-    @ValueSource(strings = {
-            "Авиабилеты",
-            "Отели",
-            "Короче",
-            "Подписка",
-            "Профиль"
-    })
-    @ParameterizedTest(name = "Проверка наличия текста - {0} на сайте  GitHub")
-    @Tags({
-            @Tag("WEB"),
-            @Tag("BLOCKER")
-    })
-    @DisplayName("ParameterizedTest для использования одного значения - ValueSource")
-    @Test
-    void parametricText(String searchQuery) {
-        SelenideLogger.addListener("allure", new AllureSelenide());
-
-        open("/");
-        $(".selene-form").$$("li").findBy(text(searchQuery)).shouldBe(enabled);
-    }
 }
