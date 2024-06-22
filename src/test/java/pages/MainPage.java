@@ -27,6 +27,7 @@ public class MainPage {
 
         return this;
     }
+
     public MainPage clickBoxOstrovok() {
         boxOstrovok.click();
 
@@ -44,7 +45,4 @@ public class MainPage {
 
         return this;
     }
-
-
-
 }

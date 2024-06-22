@@ -9,11 +9,11 @@ import static com.codeborne.selenide.Selenide.$;
 public class NowPage {
 
     private SelenideElement nowVisa = $(".s__E9Tbhhl8hEybC5rmIJrs").$$("li").findBy(text("Можно без визы")),
-                            findCity = $(".s__VLPIHQnQeyzCMiHfqsUf").$$("li").findBy(text("Стамбул")),
-                            localDish = $(byText("Местные блюда")),
-                            pageOfLocalDish = $("#travel-map-layer-selector-2240"),
-                            rusTravaling = $(".s__E9Tbhhl8hEybC5rmIJrs").$$("li").findBy(text("Путешествия по России")),
-                            listOfCity = $(".s__xox66OPZpu0km1VJV6rZ").$(".s__VLPIHQnQeyzCMiHfqsUf");
+            findCity = $(".s__VLPIHQnQeyzCMiHfqsUf").$$("li").findBy(text("Стамбул")),
+            localDish = $(byText("Местные блюда")),
+            pageOfLocalDish = $("#travel-map-layer-selector-2240"),
+            rusTravaling = $(".s__E9Tbhhl8hEybC5rmIJrs").$$("li").findBy(text("Путешествия по России")),
+            listOfCity = $(".s__xox66OPZpu0km1VJV6rZ").$(".s__VLPIHQnQeyzCMiHfqsUf");
 
 
     public NowPage clickNowVisa() {
@@ -35,7 +35,8 @@ public class NowPage {
     }
 
     public NowPage checkButtonOfLocalDish(String value) {
-        pageOfLocalDish.shouldBe(text(value));;
+        pageOfLocalDish.shouldBe(text(value));
+        ;
 
         return this;
     }

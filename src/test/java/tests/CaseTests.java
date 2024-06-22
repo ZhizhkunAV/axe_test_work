@@ -12,7 +12,7 @@ import pages.SettingsPage;
 
 import static io.qameta.allure.Allure.step;
 
-@DisplayName("Тест-сьют на aviasales")
+@DisplayName("A test suite for testing the site aviasales")
 public class CaseTests extends TestBase {
     public MainPage mainpage = new MainPage();
     public SettingsPage settingspage = new SettingsPage();
@@ -20,7 +20,7 @@ public class CaseTests extends TestBase {
     public ProfilePage profilepage = new ProfilePage();
 
 
-    @DisplayName("Наличие текста у чекбокса 'Подписаться на рассылку Авиасейлс'")
+    @DisplayName("Presence of text at the 'Subscribe to Aviasails newsletter' checkbox")
     @Tags({
             @Tag("critical"),
             @Tag("ALL")
@@ -30,18 +30,18 @@ public class CaseTests extends TestBase {
     @Test
     void haveSalesTicketsTest() {
 
-        step("Открыть стартовую страницу сайта", () -> {
+        step("Open the start page of the website", () -> {
             mainpage.openPage();
         });
-        step("Переход на страницу 'Профиль'", () -> {
+        step("Go to the 'Profile' page", () -> {
             mainpage.clickButtonProfile();
         });
-        step("Проверка наличия текста 'Подписаться на рассылку Авиасейлс'", () -> {
+        step("Check if the text 'Subscribe to Aviasails newsletter' is available", () -> {
             settingspage.checkTextElement("Подписаться на рассылку Авиасейлс");
         });
     }
 
-    @DisplayName("Название кнопки - 'Список мест (10)'")
+    @DisplayName("Button name - 'Список мест (10)'")
     @Tags({
             @Tag("critical"),
             @Tag("ALL")
@@ -51,27 +51,27 @@ public class CaseTests extends TestBase {
     @Test
     void havePlaceTextTest() {
 
-        step("Открыть стартовую страницу сайта", () -> {
+        step("Open the start page of the website", () -> {
             mainpage.openPage();
         });
-        step("Переход на страницу 'Короче'", () -> {
+        step("Go to page 'Короче'", () -> {
             mainpage.clickButtonNow();
         });
-        step("Открытие страницы 'Можно без визы'", () -> {
+        step("Opening a page 'Можно без визы'", () -> {
             nowpage.clickNowVisa();
         });
-        step("Выбор города", () -> {
+        step("City selection", () -> {
             nowpage.choiseFindCity();
         });
-        step("Выбор плашки 'Местные блюда'", () -> {
+        step("Selecting part of the screen 'Местные блюда'", () -> {
             nowpage.choiseLocalDish();
         });
-        step("Проверка названия кнопки - 'Список мест (10)'", () -> {
+        step("Checking the button name - 'Список мест (10)'", () -> {
             nowpage.checkButtonOfLocalDish("Список мест (10)");
         });
     }
 
-    @DisplayName("В выборе 'Путешествия по России' есть город 'Калинигрд'")
+    @DisplayName("In the 'Travels in Russia' selection, there is a city called 'Kalinigrd'.")
     @Tags({
             @Tag("minor"),
             @Tag("ALL")
@@ -81,16 +81,16 @@ public class CaseTests extends TestBase {
     @Test
     void haveTextAboutRussianCityTest() {
 
-        step("Открыть стартовую страницу сайта", () -> {
+        step("Open the start page of the website", () -> {
             mainpage.openPage();
         });
-        step("Переход на страницу 'Короче'", () -> {
+        step("Go to page 'Короче'", () -> {
             mainpage.clickButtonNow();
         });
-        step("Переход на страницу 'Путешествия по России'", () -> {
+        step("Go to page 'Путешествия по России'", () -> {
             nowpage.clickButtonRusTravaling();
         });
-        step("Проверка наличия города в списке - 'Калиниград'", () -> {
+        step("Checking if the city is on the list - 'Kalinigrd'", () -> {
             nowpage.clickButtonRusTravaling("Калининград");
         });
     }
@@ -100,43 +100,40 @@ public class CaseTests extends TestBase {
             @Tag("minor"),
             @Tag("ALL")
     })
-
     @Owner("Andrey")
     @Test
     void haveTextInProfileTest() {
 
-        step("Открыть стартовую страницу сайта", () -> {
+        step("Open the start page of the website", () -> {
             mainpage.openPage();
         });
-        step("Переход на страницу 'Профиль'", () -> {
+        step("Go to page 'Профиль'", () -> {
             mainpage.clickButtonProfile();
         });
-        step("Проверка наличия текста 'Доступ к поддержке и подпискам на цены' в плашке 'Ваш профиль'", () -> {
+        step("Checking for text 'Доступ к поддержке и подпискам на цены' part of the screen 'Ваш профиль'", () -> {
             profilepage.checkTextAboutPrice();
         });
     }
 
-    @DisplayName("Кликабельность чекбокса - 'Открыть Ostrovok.ru в новой вкладке' на главной странице")
+    @DisplayName("Clickability of checkbox - 'Open Ostrovok.ru in a new tab' on the main page")
     @Tags({
             @Tag("minor"),
             @Tag("ALL")
     })
-
-
     @Owner("Andrey")
     @Test
     void choiceOstrovokTest() {
 
-        step("Открыть стартовую страницу сайта", () -> {
+        step("Open the start page of the website", () -> {
             mainpage.openPage();
         });
-        step("Снять выбора в чекбоксе - 'Открыть Ostrovok.ru в новой вкладке'", () -> {
+        step("Deselect the checkbox - 'Открыть Ostrovok.ru в новой вкладке'", () -> {
             mainpage.clickBoxOstrovok();
         });
-        step("Проставить выбор в чекбоксе - 'Открыть Ostrovok.ru в новой вкладке'", () -> {
+        step("Place a selection in the checkbox - 'Открыть Ostrovok.ru в новой вкладке'", () -> {
             mainpage.clickBoxOstrovok();
         });
-        step("Проверить, что чекбокс включен", () -> {
+        step("Check that the checkbox is enabled", () -> {
             mainpage.enabledBoxOstrovok();
         });
     }
