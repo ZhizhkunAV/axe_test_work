@@ -10,7 +10,6 @@ import static com.codeborne.selenide.Selenide.open;
 public class MainPage {
 
     private SelenideElement fromCity = $("#avia_form_origin-input"),
-            whereCity = $("#avia_form_destination-input"),
             boxOstrovok = $(".s__BGUqp9s2kxbNEnDjdIYc"),
             buttonFound = $("s__Yzjov8gtTIwlOo3oK8L3"),
             buttonProfile = $(".selene-form").$$("li").findBy(text("Профиль")),
