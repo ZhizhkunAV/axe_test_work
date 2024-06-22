@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ProfilePage {
     private SelenideElement textAboutPrice = $(".s__zwNEG6Giz0QZgdTiiWBX"),
-    private SelenideElement textAboutPofile = $(".profile_layout");
+     textAboutPofile = $(".profile_layout");
 
 
 
