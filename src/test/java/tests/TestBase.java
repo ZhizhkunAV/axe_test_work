@@ -34,8 +34,6 @@ public class TestBase {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
-
-
     @AfterEach
     void addAttachment() {
         Selenide.closeWebDriver();
@@ -46,5 +44,4 @@ public class TestBase {
             Attach.browserConsoleLogs();
         }
     }
-
 }
