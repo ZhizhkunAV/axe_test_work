@@ -3,6 +3,21 @@ plugins {
     id 'io.qameta.allure' version '2.11.2'
 }
 
+
+allure {
+    report {
+        version.set('2.27.0')
+    }
+    adapter { // отвечает за появление папочки build/allure-results
+        aspectjWeaver.set(true) //обработка аннотации @Step
+        frameworks {
+            junit5 { //название фреймворка
+                adapterVersion.set("2.27.0") //версия интеграции фреймворка и Allure
+            }
+        }
+    }
+}
+
 repositories {
     mavenCentral()
 }
@@ -23,6 +38,7 @@ dependencies {
             'org.slf4j:slf4j-simple:2.0.7'
     )
 }
+
 
 test {
     useJUnitPlatform()
