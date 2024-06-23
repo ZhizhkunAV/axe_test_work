@@ -1,25 +1,24 @@
 package tests;
 
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import pages.MainPage;
 import pages.NowPage;
 import pages.ProfilePage;
 import pages.SettingsPage;
 
-import static io.qameta.allure.Allure.step;
+import static com.codeborne.selenide.Condition.enabled;
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.logevents.SelenideLogger.step;
+
 
 @DisplayName("A test suite for testing the site aviasales")
-@Owner("ZhizhkunAV")
-@Epic(value = "Testing")
-@Feature(value = "UI testing ")
-@Story(value = "Testing Aviasails page")
+
 public class CaseTests extends TestBase {
     public MainPage mainpage = new MainPage();
     public SettingsPage settingspage = new SettingsPage();
@@ -140,7 +139,6 @@ public class CaseTests extends TestBase {
         });
     }
 
-
     @DisplayName("Checking for incorrect text")
     @Tags({
             @Tag("critical"),
@@ -158,6 +156,29 @@ public class CaseTests extends TestBase {
         });
         step("Check the text", () -> {
             settingspage.checkUnsuccesTextElement("Открыть Ostrovok.ru в новой вкладке");
+        });
+    }
+
+
+    @ValueSource(strings = {
+            "Авиабилеты",
+            "Отели",
+            "Короче",
+            "Профиль"
+    })
+    @ParameterizedTest(name = "Checking for text - {0} on the site aviasales")
+    @Tags({
+            @Tag("critical"),
+            @Tag("ALL")
+    })
+    @DisplayName("ParameterizedTest to use a single value - ValueSource")
+    void toolBarTest(String searchQuery) {
+
+        step("Open the start page of the website", () -> {
+            mainpage.openPage();
+        });
+        step("Check that the checkbox is enabled", () -> {
+            $(".selene-form").$$("li").findBy(text(searchQuery)).shouldBe(enabled);
         });
     }
 }
