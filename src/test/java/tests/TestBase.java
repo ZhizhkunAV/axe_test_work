@@ -35,8 +35,6 @@ public class TestBase {
         }
 
 
-
-
         @AfterEach
         void addAttachment () {
             Attach.pageSource();
