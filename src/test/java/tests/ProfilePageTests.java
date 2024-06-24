@@ -16,6 +16,7 @@ public class ProfilePageTests extends TestBase {
     public MainPage mainpage = new MainPage();
     public ProfilePage settingspage = new ProfilePage();
     public ProfilePage profilepage = new ProfilePage();
+
     @Severity(SeverityLevel.CRITICAL)
     @Tags({
             @Tag("critical"),
@@ -32,7 +33,7 @@ public class ProfilePageTests extends TestBase {
     @Severity(SeverityLevel.MINOR)
     @DisplayName("Availability of text 'Доступ к поддержке и подпискам на цены' on the 'Your Profile' page")
     @Tags({
-            @Tag("minor"),
+            @Tag("critical"),
             @Tag("ALL")
     })
     @Test
