@@ -25,10 +25,7 @@ public class MainPageTests extends TestBase {
 
     @Severity(SeverityLevel.MINOR)
     @DisplayName("Clickability of checkbox - 'Open Ostrovok.ru in a new tab' on the main page")
-    @Tags({
-            @Tag("minor"),
-            @Tag("ALL")
-    })
+    @Tag("ALL")
     @Test
     void choiceOstrovokTest() {
         mainpage.openPage()
@@ -38,10 +35,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Severity(SeverityLevel.CRITICAL)
-    @Tags({
-            @Tag("critical"),
-            @Tag("ALL")
-    })
+    @Tag("ALL")
     @ValueSource(strings = {
             "Авиабилеты",
             "Отели",

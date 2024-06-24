@@ -20,10 +20,7 @@ public class ProfilePageTests extends TestBase {
 
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Availability of text 'Доступ к поддержке и подпискам на цены' on the 'Your Profile' page")
-    @Tags({
-            @Tag("critical"),
-            @Tag("ALL")
-    })
+    @Tag("ALL")
     @Test
     void haveTextInProfileTest() {
         mainpage.openPage()
@@ -34,10 +31,7 @@ public class ProfilePageTests extends TestBase {
 
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Presence of text at the 'Subscribe to Aviasails newsletter' checkbox")
-    @Tags({
-            @Tag("critical"),
-            @Tag("ALL")
-    })
+    @Tag("ALL")
     @Test
     void haveSalesTicketseTest() {
         mainpage.openPage()
@@ -48,10 +42,7 @@ public class ProfilePageTests extends TestBase {
 
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Checking for incorrect text - 'Открыть Ostrovok.ru в новой вкладке'")
-    @Tags({
-            @Tag("critical"),
-            @Tag("ALL")
-    })
+    @Tag("ALL")
     @Test
     void haveSalesTicketsqTest() {
         mainpage.openPage()
