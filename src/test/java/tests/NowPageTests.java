@@ -3,10 +3,10 @@ package tests;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
 import pages.NowPage;
+import pages.ProfilePage;
 
 @Epic("UI tests")
 @Owner("Andrey Zhizhkun")
@@ -14,6 +14,9 @@ import pages.NowPage;
 public class NowPageTests extends TestBase {
     public MainPage mainpage = new MainPage();
     public NowPage nowpage = new NowPage();
+    public ProfilePage profilepage = new ProfilePage();
+
+
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Button name - 'Список мест (10)'")
     @Tag("all")
@@ -34,6 +37,15 @@ public class NowPageTests extends TestBase {
         mainpage.openPage()
                 .clickButtonNow();
         nowpage.clickButtonRusTravaling("Калининград");
+    }
 
+    @Severity(SeverityLevel.CRITICAL)
+    @DisplayName("Availability of text 'Доступ к поддержке и подпискам на цены' on the 'Your Profile' page")
+    @Tag("all")
+    @Test
+    void haveTextInProfileTest() {
+        mainpage.openPage()
+                .clickButtonProfile();
+        profilepage.checkTextAboutPrice();
     }
 }
