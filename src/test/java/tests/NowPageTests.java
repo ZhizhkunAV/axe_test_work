@@ -14,10 +14,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
-@Epic("UI tests")
-@Owner("Andrey Zhizhkun")
-@Feature("Checking the functionality of the nowpage")
-@DisplayName("Testing NowPage functionality")
+
 public class NowPageTests extends TestBase {
     public MainPage mainpage = new MainPage();
     public NowPage nowpage = new NowPage();
