@@ -40,7 +40,7 @@ public class ProfilePageTests extends TestBase {
             @Tag("ALL")
     })
     @Test
-    void haveSalesTicketsTest() {
+    void haveSalesTicketseTest() {
         mainpage.openPage()
                 .clickButtonProfile();
         settingspage.checkTextElement("Подписаться на рассылку Авиасейлс");
