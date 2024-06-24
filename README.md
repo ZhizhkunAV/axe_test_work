@@ -47,9 +47,9 @@ Here you can find flights from 2000+ airlines and fly to 193 countries.
 * [x] Checking the names of buttons on the page NowPage
 * [x] In the 'Travels in Russia' selection, there is a city called 'Kaliningrad'
 * [x] Button name - 'List of places (10)'
-* [x] Availability of text 'Доступ к поддержке и подпискам на цены' on the 'Your Profile' page
+* [x] Availability of text 'Access to support and pricing subscriptions' on the 'Your Profile' page
 * [x] Presence of text at the 'Subscribe to Aviasales newsletter' checkbox
-* [x] Checking for incorrect text - 'Открыть Ostrovok.ru в новой вкладке'
+* [x] Checking for incorrect text - 'Open Ostrovok.ru in new page'
 
 <a id="jenkins"></a>
 ## <img alt="Jenkins" height="25" src="./media/img/Jenkins.svg" width="25"/></a><a name="CI/CD with Jenkins"></a>CI/CD with [Jenkins](https://jenkins.autotests.cloud/job/zhizhkunav_aviasales/)</a>
