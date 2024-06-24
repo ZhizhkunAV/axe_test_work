@@ -16,7 +16,7 @@ public class NowPageTests extends TestBase {
     public NowPage nowpage = new NowPage();
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Button name - 'Список мест (10)'")
-    @Tag("ALL")
+    @Tag("all")
     @Test
     void havePlaceTextTest() {
         mainpage.openPage()
@@ -27,7 +27,7 @@ public class NowPageTests extends TestBase {
                 .checkButtonOfLocalDish("Список мест (10)");
     }
     @Severity(SeverityLevel.MINOR)
-    @Tag("ALL")
+    @Tag("all")
     @DisplayName("In the 'Travels in Russia' selection, there is a city called 'Kalinigrd'.")
     @Test
     void haveTextAboutRussianCityTest() {
