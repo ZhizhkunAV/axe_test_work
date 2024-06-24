@@ -17,8 +17,7 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.baseUrl = "https://www.aviasales.ru/";
-        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.baseUrl = "https://www.aviasales.ru";
         Configuration.browser = System.getProperty("browser", "firefox");
         Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
         Configuration.browserVersion = System.getProperty("browser_version", "122.0");
