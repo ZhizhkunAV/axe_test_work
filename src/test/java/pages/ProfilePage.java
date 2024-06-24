@@ -8,8 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ProfilePage {
     private SelenideElement elementProfile = $(".s__GbiR6nyWpRvfj6X4o71s"),
-            textAboutPrice = $(".s__zwNEG6Giz0QZgdTiiWBX"),
-            textAboutPofile = $(".profile_layout");
+            textAboutPrice = $(".s__zwNEG6Giz0QZgdTiiWBX");
 
 
     @Step("Check if the text 'Subscribe to Aviasails newsletter' is available")
