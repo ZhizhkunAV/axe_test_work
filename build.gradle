@@ -55,18 +55,9 @@ tasks.withType(Test).configureEach {
         }
     }
 }
-task critical_test(type: Test) {
-    useJUnitPlatform {
-        includeTags("critical")
-    }
-}
-task minor_test(type: Test) {
-    useJUnitPlatform {
-        includeTags("minor")
-    }
-}
+
 task all_test(type: Test) {
     useJUnitPlatform {
-        includeTags("ALL")
+        includeTags("all")
     }
 }
