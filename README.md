@@ -42,11 +42,14 @@ Here you can find flights from 2000+ airlines and fly to 193 countries.
 <a id="scenarios"></a>
 ## Test Scenarios
 
-* [x] Check the elements of the main page
-* [x] The presence of the text in the checkbox 'Subscribe to the Airsales newsletter'
-* [x] The name of the button is 'List of places (10)'
-* [x] In the choice of 'Travel to Russia' there is the city of 'Kalinigrd'
-* [x] The presence of the text 'Access to support and price subscriptions' in the bar 'Your profile'
+* [x] Clickability of checkbox - 'Open Ostrovok.ru in a new tab' on the main page
+* [x] Checking for text on the site aviasales (@ParameterizedTest)
+* [x] Checking the names of buttons on the page NowPage
+* [x] In the 'Travels in Russia' selection, there is a city called 'Kaliningrad'
+* [x] Button name - 'List of places (10)'
+* [x] Availability of text 'Access to support and pricing subscriptions' on the 'Your Profile' page
+* [x] Presence of text at the 'Subscribe to Aviasales newsletter' checkbox
+* [x] Checking for incorrect text - 'Open Ostrovok.ru in new page'
 
 <a id="jenkins"></a>
 ## <img alt="Jenkins" height="25" src="./media/img/Jenkins.svg" width="25"/></a><a name="CI/CD with Jenkins"></a>CI/CD with [Jenkins](https://jenkins.autotests.cloud/job/zhizhkunav_aviasales/)</a>
@@ -54,7 +57,7 @@ Here you can find flights from 2000+ airlines and fly to 193 countries.
 
 ### Jenkins parameters:
 
-- `TASK` (all tests will be launched by `askmask_smoke_test` by default)
+- `TASK` (all tests will be launched by `all_test` by default)
 - `BROWSER` (browser, `chrome` by default)
 - `BROWSER_VERSION` (version of browser, `120` by default)
 - `BROWSER_SIZE` (browser windows size, `1920x1080` by default)
