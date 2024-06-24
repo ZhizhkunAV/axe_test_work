@@ -11,7 +11,6 @@ import pages.ProfilePage;
 @Epic("UI tests")
 @Owner("Andrey Zhizhkun")
 @Feature("Checking the functionality of the profile page")
-@Tag("ui")
 public class ProfilePageTests extends TestBase {
 
     public MainPage mainpage = new MainPage();

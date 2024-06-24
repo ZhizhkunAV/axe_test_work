@@ -11,7 +11,6 @@ import pages.NowPage;
 @Epic("UI tests")
 @Owner("Andrey Zhizhkun")
 @Feature("Checking the functionality of the nowpage")
-@Tag("ui")
 public class NowPageTests extends TestBase {
     public MainPage mainpage = new MainPage();
     public NowPage nowpage = new NowPage();
