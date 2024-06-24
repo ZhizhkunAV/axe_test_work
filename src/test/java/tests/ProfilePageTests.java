@@ -10,6 +10,8 @@ import pages.ProfilePage;
 @Epic("UI tests")
 @Owner("Andrey Zhizhkun")
 @Feature("Checking the functionality of the profile page")
+@Tag("all")
+@DisplayName("Testing Profile page functionality")
 public class ProfilePageTests extends TestBase {
 
     public MainPage mainpage = new MainPage();
@@ -28,10 +30,10 @@ public class ProfilePageTests extends TestBase {
     }
 
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Presence of text at the 'Subscribe to Aviasails newsletter' checkbox")
+    @DisplayName("Presence of text at the 'Subscribe to Aviasales newsletter' checkbox")
     @Tag("all")
     @Test
-    void haveSalesTicketseTest() {
+    void haveSalesTicketsTest() {
         mainpage.openPage()
                 .clickButtonProfile();
         settingspage.checkTextElement("Подписаться на рассылку Авиасейлс");
@@ -42,9 +44,9 @@ public class ProfilePageTests extends TestBase {
     @DisplayName("Checking for incorrect text - 'Открыть Ostrovok.ru в новой вкладке'")
     @Tag("all")
     @Test
-    void haveSalesTicketsqTest() {
+    void notHaveOstrovokButtonTest() {
         mainpage.openPage()
                 .clickButtonProfile();
-        profilepage.checkUnsuccesTextElement("Открыть Ostrovok.ru в новой вкладке");
+        profilepage.checkUnsuccessTextElement("Открыть Ostrovok.ru в новой вкладке");
     }
 }
