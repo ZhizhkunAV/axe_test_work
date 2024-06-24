@@ -17,7 +17,6 @@ import static io.qameta.allure.Allure.step;
 @Epic("UI tests")
 @Owner("Andrey Zhizhkun")
 @Feature("Checking the functionality of the nowpage")
-@Tag("all")
 @DisplayName("Testing NowPage functionality")
 public class NowPageTests extends TestBase {
     public MainPage mainpage = new MainPage();
@@ -41,7 +40,7 @@ public class NowPageTests extends TestBase {
     void haveTextAboutRussianCityTest() {
         mainpage.openPage()
                 .clickButtonNow();
-        nowpage.clickButtonRusTravaling("Калининград");
+        nowpage.clickButtonRusTraveling("Калининград");
     }
 
 

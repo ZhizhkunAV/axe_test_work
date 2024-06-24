@@ -10,7 +10,6 @@ import pages.ProfilePage;
 @Epic("UI tests")
 @Owner("Andrey Zhizhkun")
 @Feature("Checking the functionality of the profile page")
-@Tag("all")
 @DisplayName("Testing Profile page functionality")
 public class ProfilePageTests extends TestBase {
 

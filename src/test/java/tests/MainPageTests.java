@@ -18,7 +18,6 @@ import static io.qameta.allure.Allure.step;
 @Epic("UI tests")
 @Owner("Andrey Zhizhkun")
 @Feature("Checking the functionality of the main page")
-@Tag("all")
 @DisplayName("Testing Main page functionality")
 public class MainPageTests extends TestBase {
     public MainPage mainpage = new MainPage();

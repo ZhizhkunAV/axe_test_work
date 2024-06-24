@@ -42,7 +42,7 @@ public class NowPage {
     }
 
     @Step("Checking if the city is on the list - 'Kalinigrd'")
-    public NowPage clickButtonRusTravaling(String value) {
+    public NowPage clickButtonRusTraveling(String value) {
         listOfCity.shouldBe(text(value));
 
         return this;
