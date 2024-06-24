@@ -17,12 +17,14 @@ public class ProfilePageTests extends TestBase {
     public ProfilePage settingspage = new ProfilePage();
     public ProfilePage profilepage = new ProfilePage();
 
+
+
     @Severity(SeverityLevel.CRITICAL)
+    @DisplayName("Presence of text at the 'Subscribe to Aviasails newsletter' checkbox")
     @Tags({
             @Tag("critical"),
             @Tag("ALL")
     })
-    @DisplayName("Presence of text at the 'Subscribe to Aviasails newsletter' checkbox")
     @Test
     void haveSalesTicketsTest() {
         mainpage.openPage()
@@ -30,7 +32,7 @@ public class ProfilePageTests extends TestBase {
         settingspage.checkTextElement("Подписаться на рассылку Авиасейлс");
     }
 
-    @Severity(SeverityLevel.MINOR)
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Availability of text 'Доступ к поддержке и подпискам на цены' on the 'Your Profile' page")
     @Tags({
             @Tag("critical"),
