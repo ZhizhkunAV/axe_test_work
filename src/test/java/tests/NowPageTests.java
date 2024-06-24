@@ -4,21 +4,23 @@ import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import pages.MainPage;
 import pages.NowPage;
-
+import org.junit.jupiter.params.ParameterizedTest;
 import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
-
+@Epic("UI tests")
+@Owner("Andrey Zhizhkun")
+@Feature("Checking the functionality of the nowpage")
+@Tag("all")
+@DisplayName("Testing NowPage functionality")
 public class NowPageTests extends TestBase {
     public MainPage mainpage = new MainPage();
     public NowPage nowpage = new NowPage();
-
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Button name - 'Список мест (10)'")
     @Tag("all")
@@ -31,7 +33,6 @@ public class NowPageTests extends TestBase {
                 .choiseLocalDish()
                 .checkButtonOfLocalDish("Список мест (10)");
     }
-
     @Severity(SeverityLevel.MINOR)
     @Tag("all")
     @DisplayName("In the 'Travels in Russia' selection, there is a city called 'Kaliningrad'.")
@@ -59,8 +60,7 @@ public class NowPageTests extends TestBase {
             mainpage.openPage();
         });
         step("Click button Now", () -> {
-            mainpage.clickButtonNow();
-        });
+            mainpage.clickButtonNow();});
         step("Check that the checkbox is enabled", () -> {
             $(".s__E9Tbhhl8hEybC5rmIJrs").$$("li").findBy(text(searchQuery)).shouldBe(enabled);
         });

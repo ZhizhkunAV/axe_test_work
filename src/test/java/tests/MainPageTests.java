@@ -9,13 +9,16 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import pages.MainPage;
 
-import static com.codeborne.selenide.Condition.enabled;
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
 
-
+@Epic("UI tests")
+@Owner("Andrey Zhizhkun")
+@Feature("Checking the functionality of the main page")
+@Tag("all")
+@DisplayName("Testing Main page functionality")
 public class MainPageTests extends TestBase {
     public MainPage mainpage = new MainPage();
 
