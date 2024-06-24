@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
 import pages.ProfilePage;
+
 @Epic("UI tests")
 @Owner("Andrey Zhizhkun")
 @Feature("Checking the functionality of the profile page")
@@ -17,6 +18,19 @@ public class ProfilePageTests extends TestBase {
     public ProfilePage settingspage = new ProfilePage();
     public ProfilePage profilepage = new ProfilePage();
 
+
+    @Severity(SeverityLevel.CRITICAL)
+    @DisplayName("Availability of text 'Доступ к поддержке и подпискам на цены' on the 'Your Profile' page")
+    @Tags({
+            @Tag("critical"),
+            @Tag("ALL")
+    })
+    @Test
+    void haveTextInProfileTest() {
+        mainpage.openPage()
+                .clickButtonProfile();
+        profilepage.checkTextAboutPrice();
+    }
 
 
     @Severity(SeverityLevel.CRITICAL)
@@ -30,19 +44,6 @@ public class ProfilePageTests extends TestBase {
         mainpage.openPage()
                 .clickButtonProfile();
         settingspage.checkTextElement("Подписаться на рассылку Авиасейлс");
-    }
-
-    @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Availability of text 'Доступ к поддержке и подпискам на цены' on the 'Your Profile' page")
-    @Tags({
-            @Tag("critical"),
-            @Tag("ALL")
-    })
-    @Test
-    void haveTextInProfileTest() {
-        mainpage.openPage()
-                .clickButtonProfile();
-        profilepage.checkTextAboutPrice();
     }
 
 
