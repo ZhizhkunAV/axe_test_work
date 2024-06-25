@@ -41,7 +41,7 @@ public class NowPage {
         return this;
     }
 
-    @Step("Checking if the city is on the list - 'Kalinigrd'")
+    @Step("Checking if the city is on the list - 'Kaliningrad'")
     public NowPage clickButtonRusTraveling(String value) {
         listOfCity.shouldBe(text(value));
 
