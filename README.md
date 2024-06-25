@@ -70,7 +70,7 @@ clean ${TASK} -Dbrowser=${BROWSER} -DbrowserVersion=${BROWSER_VERSION} -Dbrowser
 ```
 
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="./media/img/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [reporting](https://jenkins.autotests.cloud/job/zhizhkunav_aviasales/3/allure/)</a>
+## <img alt="Allure" height="25" src="./media/img/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [reporting](https://jenkins.autotests.cloud/job/zhizhkunav_aviasales/52/allure/)</a>
 <img alt="Allure" src="./media/reports/AllureReportExample.PNG"> 
 
 `Allure` report includes:
